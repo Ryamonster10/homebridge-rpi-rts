@@ -33,7 +33,8 @@ class SomfyRtsRemoteAccessory {
 		// Delay to reset the switch after being pressed
 		this.delay = 500;
 		
-		this.buttons = ['Up', 'Down', 'My'];
+		this.buttons = ['Down', 'My'];
+		if (this.config.up !== false) this.buttons.unshift('Up');
 		if (this.config.prog === true) this.buttons.push('Prog');
 		
 		// Create an object such as {'Up': false, 'Down': false, ...}
